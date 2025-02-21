@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "root"></div>
+    <img src = "https://cdn.pixabay.com/photo/2013/07/13/10/51/football-157930_1280.png" width = "200px" id = "pic" />
+
+
+    <script>
+ //     b.onkeydown = () => {
+    //         root.innerHTML = "Hello World"
+    // };
+    // b.onekey = (e) =>{
+    //     //root.innerHTML = e.key;
+    // };
+
+    // pic.style.position = "absolute";
+    // let b = document.body;
+    // let left = 0;
+
+    // b.onkeydown = (e) =>{
+    //     left +=50;
+    //     pic.style.left = left + "px";
+    // };
+
+    pic.style.position = "absolute";
+    let b = document.body;
+    let left = 0;
+    let down = 0;
+    let right = 0;
+    let up = 0;
+
+    b.onkeydown = (e) =>{
+        if(e.key == "a") left += 5;
+        if(e.key == "ArrowDown") down += 5;
+        if(e.key == "ArrowLeft") left -= 5;
+        if(e.key == "ArrowUp") down -=5;
+        pic.style.left = left + "px";
+        pic.style.top = down + "px";
+    };
+    
+    </script>
+</body>
+</html>
